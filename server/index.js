@@ -16,9 +16,9 @@ const db = mysql.createConnection({
     password: 'nrb2PfTU02xn8X1e8jR5',
     database: 'bjkrjkfqb6hxkflupozu'
 });
-app.get('/', (req, res) =>{
-        res.status(200).json({message : "Welcome to Desk "});
-    })
+app.get('/', (req, res) => {
+    res.render('../desk/public/index.html');
+})
 app.post('/' , (req, res) => {
     const username = req.body.username ;
     const password = req.body.password ;
